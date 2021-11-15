@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password</title>
+        <style>
+            .container{
+                width:500px;
+                box-shadow: 0 0 30px black;
+                padding: 20px;
+                text-align: center;
+                margin:100px auto;
+            }
+        </style>
+        <script>
+            function showPw(){
+                var password=document.getElementById("pw")
+                if(password.type=="password"){
+                    password.type="text"
+                }else{
+                    password.type="password";
+                }
+                var btn=document.getElementById("btn")
+                if(btn.innerText=="show"){
+                    btn.innerText="hide"
+                }else{
+                    btn.innerText="show"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Enter password</h1>
+            <input type="password" id="pw" required>
+            <button id="btn" onclick="showPw()">show</button>
+        </div>
+        
+    </body>
+</html>
